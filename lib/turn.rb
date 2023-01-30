@@ -6,4 +6,8 @@ class Turn
     @string = string
     @card = card
   end
+
+  def guess
+    @string
+  end
 end
