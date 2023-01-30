@@ -8,7 +8,12 @@ RSpec.describe Turn do
   
   describe '#initialize' do
     it 'exists' do
-      expect(turn).to be_a Turn
+      expect(turn).to be_instance_of(Turn)
+    end
+
+    it 'has attributes' do
+      expect(turn.string).to eq("Juneau")
+      expect(turn.card).to eq(card)
     end
   end
 end
