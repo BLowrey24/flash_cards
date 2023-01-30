@@ -22,4 +22,10 @@ RSpec.describe Turn do
       expect(turn.guess).to eq ("Juneau")
     end
   end
+
+  describe '#correct?' do
+    it 'can return true or false' do
+      expect(turn.correct?).to eq(true)
+    end
+  end
 end
