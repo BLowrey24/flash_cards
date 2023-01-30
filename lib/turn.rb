@@ -10,4 +10,8 @@ class Turn
   def guess
     @string
   end
+
+  def correct?
+    true if guess == @string
+  end
 end
