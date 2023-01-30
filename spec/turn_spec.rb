@@ -31,7 +31,6 @@ RSpec.describe Turn do
 
   describe '#feedback' do
     it 'gives feedback based on #correct?' do
-      require 'pry'; binding.pry
       expect(turn.feedback).to eq("Correct!")
     end
   end

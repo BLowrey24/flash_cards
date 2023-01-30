@@ -14,4 +14,12 @@ class Turn
   def correct?
     true if guess == @string
   end
+
+  def feedback
+    if correct? == true
+      "Correct!"
+    else
+      "Incorrect."
+    end
+  end
 end
