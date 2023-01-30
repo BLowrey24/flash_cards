@@ -16,4 +16,10 @@ RSpec.describe Turn do
       expect(turn.card).to eq(card)
     end
   end
+
+  describe '#guess' do
+    it 'can make a guess' do
+      expect(turn.guess).to eq ("Juneau")
+    end
+  end
 end
