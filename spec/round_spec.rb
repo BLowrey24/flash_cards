@@ -1,4 +1,5 @@
 require './lib/card'
+require './lib/turn'
 require './lib/deck'
 require './lib/round'
 
@@ -21,7 +22,7 @@ RSpec.describe Round do
       expect(round.turns).to eq([])
     end
   end
-
+  
   describe '#current_card' do
     it 'returns the current card' do
       expect(round.current_card).to eq(card_1)
@@ -31,8 +32,10 @@ RSpec.describe Round do
   describe '#take_turn' do
     it 'can take a turn' do
       new_turn = round.take_turn("Juneau")
+      
       expect(new_turn).to be_instance_of(Turn)
       expect(new_turn.correct?).to eq(true)
+      expect(round.number_correct).to eq(1)
     end
   end
 end

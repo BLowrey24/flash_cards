@@ -11,16 +11,17 @@ RSpec.describe Turn do
   
   describe '#initialize' do
     it 'exists' do
+      require 'pry'; binding.pry
       expect(turn_1).to be_instance_of(Turn)
       expect(turn_2).to be_instance_of(Turn)
     end
 
     it 'has attributes' do
       expect(turn_1.string).to eq("Juneau")
-      expect(turn_1.card).to eq(card1)
+      expect(turn_1.card).to eq(card_1)
       
       expect(turn_2.string).to eq("Saturn")
-      expect(turn_2.card).to eq(card2)
+      expect(turn_2.card).to eq(card_2)
     end
   end
 
