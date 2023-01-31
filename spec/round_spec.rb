@@ -27,4 +27,12 @@ RSpec.describe Round do
       expect(round.current_card).to eq(card_1)
     end
   end
+
+  describe '#take_turn' do
+    it 'can take a turn' do
+      new_turn = round.take_turn("Juneau")
+      expect(new_turn).to be_instance_of(Turn)
+      expect(new_turn.correct?).to eq(true)
+    end
+  end
 end
