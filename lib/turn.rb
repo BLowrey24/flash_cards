@@ -12,6 +12,9 @@ class Turn
   end
 
   def correct?
+    # return true if guess == @card.answer
+    # false
+    
     if guess == @card.answer
       true
     else
