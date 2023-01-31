@@ -16,16 +16,23 @@ RSpec.describe Deck do
       expect(deck).to be_instance_of(Deck)
     end
 
-    it 'has attributes' do
+    it 'has cards' do
       expect(deck.cards).to eq([card_1, card_2, card_3])
     end
-
-    # it 'can add cards to deck' do
-    #   deck.add_card(card_1)
-    #   deck.add_card(card_2)
-    #   deck.add_card(card_3)
-    #   require 'pry'; binding.pry
-    #   expect(deck.cards).to eq([card_1, card_2, card_3])
-    # end
   end
+
+  describe '#count' do
+    it 'can count the # of cards in the deck' do
+      expect(deck.count).to eq(3)
+    end
+  end
+  # describe '#add_card' do
+  #  # it 'can add cards to deck' do
+  #   #   deck.add_card(card_1)
+  #   #   deck.add_card(card_2)
+  #   #   deck.add_card(card_3)
+  #   #   require 'pry'; binding.pry
+  #   #   expect(deck.cards).to eq([card_1, card_2, card_3])
+  #   # end
+  # end
 end
