@@ -8,4 +8,12 @@ class Deck
   def count
     cards.count
   end
+
+  def cards_in_category(category)
+    cards.select { |card| card.category == category }
+  end
+
+  # def add_card(card)
+  #   cards << card
+  # end
 end

@@ -27,7 +27,7 @@ RSpec.describe Deck do
     end
   end
 
-  decribe '#cards_in_category' do
+  describe '#cards_in_category' do
     it 'can find cards in a specific category' do
       expect(deck.cards_in_category(:STEM)).to eq([card_2, card_3])
       expect(deck.cards_in_category(:Geography)).to eq([card_1])
