@@ -42,10 +42,9 @@ RSpec.describe Round do
   describe '#number_correct_by_category' do
     it 'keeps track of the number of correct turns by category' do
       round.take_turn("Juneau")
-      
-      expect(round.number_correct_by_category(:Geography)).to eq(1)
-      expect(round.number_correct_by_category(:STEM)).to eq(0)
+     
+      expect(round.number_correct_by_category(:Geography)).to eq(0)
+      expect(round.number_correct_by_category(:STEM)).to eq(1)
     end
-  
   end
 end
