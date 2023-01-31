@@ -26,6 +26,14 @@ RSpec.describe Deck do
       expect(deck.count).to eq(3)
     end
   end
+
+  decribe '#cards_in_category' do
+    it 'can find cards in a specific category' do
+      expect(deck.cards_in_category(:STEM)).to eq([card_2, card_3])
+      expect(deck.cards_in_category(:Geography)).to eq([card_1])
+      expect(deck.cards_in_category("Pop Culture")).to eq([])
+    end
+  end
   # describe '#add_card' do
   #  # it 'can add cards to deck' do
   #   #   deck.add_card(card_1)
