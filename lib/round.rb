@@ -17,13 +17,20 @@ class Round
 
   def take_turn(guess)
     turn = Turn.new(guess, current_card)
-    turns << turn
+   
     @number_correct += 1 if turn.correct?
     @categories_scores[current_card.category] += 1 if turn.correct?
+   
+    turns << turn
+    
     turn
   end
 
   def number_correct_by_category(category)
     categories_scores[category]
+  end
+
+  def percent_correct
+    (number_correct.to_f / turns.count * 100).round(1) 
   end
 end
