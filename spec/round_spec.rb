@@ -37,6 +37,14 @@ RSpec.describe Round do
       expect(new_turn.correct?).to eq(true)
       expect(round.number_correct).to eq(1)
     end
+
+    it 'advances to the next card' do
+      round.take_turn("Juneau")
+      expect(round.current_card).to eq(card_2)
+
+      round.take_turn("Venus")
+      expect(round.current_card).to eq(card_3)
+    end
   end
 
   describe '#number_correct_by_category' do
