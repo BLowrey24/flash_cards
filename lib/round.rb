@@ -33,4 +33,16 @@ class Round
   def percent_correct
     (number_correct.to_f / turns.count * 100).round(1) 
   end
+
+  def percent_correct_by_category(category)
+    number_of_correct_turns_in_category = turns.select do |turn|
+      turn.correct? && turn.card.category == category
+    end.count
+  
+    number_of_cards_in_category = deck.cards.select do |card|
+      card.category == category
+    end.count
+  
+    (number_of_correct_turns_in_category.to_f / number_of_cards_in_category * 100).round(2)
+  end
 end

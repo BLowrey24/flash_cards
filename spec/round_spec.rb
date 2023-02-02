@@ -60,7 +60,7 @@ RSpec.describe Round do
   describe '#percent_correct_by_category' do
     it 'calculates the percentage of correct answers by category' do
       round.take_turn("Juneau")
-      
+      require 'pry'; binding.pry
       expect(round.percent_correct_by_category(:Geography)).to eq(100.0)
     end
   end
